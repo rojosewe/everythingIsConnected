@@ -1,0 +1,185 @@
+body
+{
+	background-color: #76756c;	
+	background-image:url(../images/Bg.jpg);
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	overflow-x: hidden;
+}
+
+#logo
+{
+	margin-top:30px;
+	margin-left:36px;
+	margin-bottom: 30px;
+}
+
+a{
+	text-decoration:none;
+	color: #56554c;
+}
+
+a:VISITED{
+	text-decoration:none;
+	color: #594a45;
+}
+
+a:hover{
+	color: #cc3e3a;
+}
+
+#center
+{
+	width:100%;
+	min-height: 600px;
+}
+
+#footer
+{
+	text-align:center;
+	height: 150px;	
+	font-family:Arial, Helvetica, sans-serif;
+	color: #ebe8d9;
+}
+
+#slogan
+{
+	
+}
+
+.tab
+{
+	margin-top: 10px;
+	padding: 56px;
+	border-top: solid #fff 2px;
+	border-right: solid #fff 2px;
+	border-bottom: solid #fff 2px;
+	text-align:center;
+	width: 100%;
+	cursor: pointer;
+}
+
+#ArtTab
+{
+	background-color: #594a45;
+}
+
+#ArtTab:hover
+{
+	background-color: #000;
+}
+
+#SocialTab
+{
+	background-color: #cc3e3a;	
+}
+
+#SocialTab:hover
+{
+	background-color: #000;	
+}
+
+#TechTab
+{
+	background-color: #ebe8d9;	
+}
+
+#TechTab:hover
+{
+	background-color: #000;	
+}
+
+#mainContentBorder
+{
+	background-color: #ebe8d9;
+	border: solid #FFF 2px;
+	padding: 12px;
+	margin: 10px;
+	margin-left: 60px;
+	text-align: right;
+	display: none;
+	max-width:800px;
+}
+
+#mainContent
+{
+	background-color: #ebe8d9;
+	border: solid 10px #594a45;
+	text-align: justify;
+	padding: 30px 50px 30px 50px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#56554c;
+	min-height: 350px;
+}
+
+.title
+{
+	margin-bottom: 40px;	
+}
+
+#ArtContent
+{
+	display:none;	
+}
+
+#SocialContent
+{
+	display:none;	
+}
+
+#ropic{
+	margin-left: 40px;
+}
+
+#socialText
+{
+	width: 600px;	
+}
+
+
+
+.iconSet
+{
+	margin-bottom: 20px;	
+	text-align:right;
+}
+
+.icon
+{
+	padding-top: 2px;
+	padding-right: 1px;
+	border-radius: 10px;
+}
+
+.mail
+{
+	color: #56554c;
+}
+
+.icon:hover
+{
+	background: #cc3e3a;
+}
+
+#TechContent
+{
+	display:none;	
+}
+
+.ArtThumb
+{
+	border: #333 solid 8px;
+	margin: 10PX;
+}
+
+.ArtStuff
+{
+	text-align:center;	
+}
+
+.tech-content
+{
+	border-bottom:  solid 3px #fff;	
+}

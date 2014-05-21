@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" type="image/png" href="images/li.png">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>  
+<title>Everything Is Connected - Index a new item</title>
+<style>
+	body
+	{
+		text-align:center;
+		margin: 20px;
+		font-family: Arial, Helvetica, sans-serif;
+		background-color:#ffffff;
+	}
+	
+	.wht_text
+	{
+		width: 95%;
+		max-width: 50EM;
+		margin:auto;
+		margin-top: 60px;
+		text-align:justify;
+		font-size: 16pt;
+	}
+	
+	.title
+	{
+		margin-top: 30px;
+		color: #126897;
+		font-weight: bold;
+		font-size: 18pt;
+	}
+	
+	.inputSearch
+	{
+		width: 85%;
+		max-width: 50EM;
+		height: 2.5em;
+		text-align: left;
+		font-size: 12pt;
+		border-radius: 5px;
+		border: #bbb solid 1px;
+		background-color: #fcfcfc;
+		margin: 10px;
+		padding: 0px 10px;
+	}
+	
+	.inputButton
+	{
+		width: 5EM;
+		height: 2.5em;
+		text-align: center;
+		font-size: 12pt;
+		border-radius: 5px;
+		color: #FFF;
+		background-color: #126897;
+		border: none;
+		margin: 10px;
+	}
+</style>
+</head>
+<body>
+	<div>
+    	<div>
+    		<a href="index.html">
+        		<img src="images/logo.png" style="width: 85%; max-width: 327px"/><br/>
+            </a>
+        </div>
+        <div class="wht_text">
+        	Here you can enter a new item that you want to search for(the term must be identical as it is in Wikipedia). 
+        	After you click "Index" the system will add the new relationships to the database.
+        	Come back in around 5 minutes and the item will be indexed.  
+        </div>
+        <div>
+        	<form method="get" action="dbpop">
+            	<input type="text"  class="inputSearch" name="root" id="root" placeholder="Enter the new term"/><br/>
+                <input type="submit"  class="inputButton" value="Index" id="submit"/>
+            </form>
+        </div>
+    </div>
+    <script>
+    	function getURLParameter(name) {
+	        return decodeURI(
+	            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+	        );
+	    }
+	    
+	    var indexing = getURLParameter('item');
+	    if(indexing && indexing != null && indexing != "null")
+    	{
+    		$("#root").val(indexing);
+    	}
+    </script>
+</body>
+</html>

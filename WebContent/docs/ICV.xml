@@ -1,0 +1,126 @@
+<jobs>
+	<job id="csi">
+		<who>
+			Colegio San Ignacio.
+		</who>
+		<where>
+			Caracas, Venezuela.
+		</where>
+		<when>
+			July 1998 - July 2002.
+		</when>
+		<what>
+			High school Diploma.
+		</what>
+		<url>
+			http://www.colegiosanignacio.com.ve/
+		</url>
+	</job>
+	<job id="hil">
+		<who>
+			Hilliard High school
+		</who>
+		<where>
+			Hilliard, OH, USA.
+		</where>
+		<when>
+			August 2002 - June 2003.
+		</when>
+		<what>
+			High school Diploma.
+		</what>
+		<url>
+			http://hdb.hilliardschools.org/
+		</url>
+	</job>
+	<job id="usb">
+		<who>
+			Universidad Simón Bolívar.
+		</who>
+		<where>
+			Caracas, Venezuela.
+		</where>
+		<when>
+			September 2003 - June 2010.
+		</when>
+		<what>
+			Bachelor of Science - Computer Science.
+		</what>
+		<url>
+			http://www.usb.ve/
+		</url>
+	</job>
+	<job id="tum">
+		<who>
+			Gobal Game Jam 2011.
+		</who>
+		<where>
+			Caracas, Venezuela.
+		</where>
+		<when>
+			January 2011.
+		</when>
+		<what>
+			Main Artist and Designer
+		</what>
+		<url>
+			http://www.newgrounds.com/portal/view/561016
+		</url>
+	</job>
+	<job id="che">
+		<who>
+		</who>
+		<where>
+		</where>
+		<when>
+		</when>
+		<what>
+		</what>
+		<url>
+		</url>
+		<image>
+		</image>
+	</job>
+	<job id="ter">
+		<who>
+		</who>
+		<where>
+		</where>
+		<when>
+		</when>
+		<what>
+		</what>
+		<url>
+		</url>
+		<image>
+		</image>
+	</job>
+	<job id="nov">
+		<who>
+		</who>
+		<where>
+		</where>
+		<when>
+		</when>
+		<what>
+		</what>
+		<url>
+		</url>
+		<image>
+		</image>
+	</job>
+	<job id="adl">
+		<who>
+		</who>
+		<where>
+		</where>
+		<when>
+		</when>
+		<what>
+		</what>
+		<url>
+		</url>
+		<image>
+		</image>
+	</job>	
+</jobs>

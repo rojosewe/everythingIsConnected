@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="eic" basedir="." default="default">
+	<target name="default" depends="buildwar,deploy"></target>
+	<target name="buildwar">
+		<war basedir="WebContent" destfile="eic.war" webxml="WebContent/WEB-INF/web.xml">
+			<exclude name="WEB-INF/**" />
+			<webinf dir="WebContent/WEB-INF/">
+				<include name="**/*.jar" />
+				<include name="**/*.xml" />
+			</webinf>
+		</war>
+	</target>
+	<target name="deploy">
+    	<copy file="eic.war" todir="." />
+	</target>
+</project>	

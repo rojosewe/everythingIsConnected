@@ -1,0 +1,117 @@
+body
+{
+	text-align:center;
+	background-color:#ffffff;
+	color:#333;
+	padding: 20px;
+}
+
+.header
+{
+	font-size: 14pt;
+}
+
+.articleTitle
+{
+	font-size: 14pt;
+	border: solid 5px #fff;
+	background-color: #126897;
+		margin: auto;
+	font-family:Arial, Helvetica, sans-serif;
+	padding: 10px;
+	border-radius: 10px;
+	width:20em;
+	color:#ffffff;
+}
+
+.articleTitle a
+{
+	color:#ffffff;
+}
+
+.articleTitle a:visited
+{
+	color:#ffffff;
+}
+
+
+#miniLogo
+{
+	margin: 10px;
+}
+
+#linkMapTitle
+{
+	color: #126897;
+	font-size: 16pt;
+}
+
+.linkMapNumber
+{
+	font-size: 14pt;	
+}
+
+.linkPath
+{
+	list-style:none;
+	margin: 10px;
+	font-size: 14pt;	
+}
+
+.linkMap
+{
+	text-align:justify;
+	margin-left: 100px;
+	margin-right: 100px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.connection
+{
+	border: solid 4px #126897;
+	width: 35em;
+	text-align:center;
+	margin:auto;
+	border-radius: 10px;
+	background-color:#FFF;
+}
+
+.connectionTitle
+{
+	font-size: 14pt;
+	margin: 10px;
+}
+
+.moreLink
+{
+	text-decoration:underline;
+	color: #0000FF;
+}
+
+.linkLine
+{
+	background-color:#126897;
+	width: 10px;
+	margin:auto;
+	height: 2em;
+}
+
+a
+{
+	color:#588a9c;	
+}
+
+a:visited
+{
+	color: #00909c;
+}
+
+.hitPointList
+{
+	font-size:16pt;	
+}
+
+.a img{
+border:0;
+}
+

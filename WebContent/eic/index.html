@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Discover how Everything Is Connected </title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+<link rel="icon" type="image/png" href="images/li.png">
+<style>
+	body
+	{
+		text-align:center;
+		margin: 20px;
+		font-family: Arial, Helvetica, sans-serif;
+		background-color:#ffffff;
+	}
+	
+	#enterForm
+	{
+		margin:10px;
+	}
+	
+	.inputSearch
+	{
+		width: 85%;
+		max-width: 50EM;
+		height: 2.5em;
+		text-align: left;
+		font-size: 12pt;
+		border-radius: 5px;
+		border: #bbb solid 1px;
+		background-color: #fcfcfc;
+		margin: 10px;
+		padding: 0px 10px;
+	}
+	
+	.inputButton
+	{
+		width: 5EM;
+		height: 2.5em;
+		text-align: center;
+		font-size: 12pt;
+		border-radius: 5px;
+		color: #FFF;
+		background-color: #126897;
+		border: none;
+		margin: 10px;
+	}
+	
+	.autocomplete-w1 
+	{
+		width: 85%;
+		max-width: 50EM;
+		absolute; top:0px; 
+		left:0px; 
+		margin:6px 0 0 6px; /* IE6 fix: */ 
+		_background:none; 
+		_margin:1px 0 0 0; 
+	}
+	.autocomplete 
+	{
+		border:1px solid #ccc; 
+		background:#FFF; 
+		cursor:default; 
+		text-align:left; 
+		max-height:350px; 
+		overflow:auto; 
+		margin:-6px 6px 6px -6px; 
+		/* IE6 specific: */ 
+		_height:350px;  
+		_margin:0; 
+		_overflow-x:hidden; 
+		width: 100%;
+	}
+	.autocomplete .selected 
+	{ 
+		background:#F0F0F0; 
+	}
+	.autocomplete div 
+	{ 
+		padding:5px 10px; 
+		white-space:nowrap; 
+		overflow:hidden; 
+	}
+	.autocomplete strong 
+	{ 
+		font-weight:normal; 
+		color:#4f96be; 
+	}
+	
+	.indexing
+	{
+		width: 85%;
+		max-width: 50EM;
+		font-size: 12pt;
+		border-radius: 5px;
+		border: #FF3833 solid 1px;
+		background-color: #fcfcfc;
+		margin: 10px auto;
+		padding: 10px;
+		color: #FF3833;
+	}
+	
+</style>
+</head>
+<body>
+	<div>
+    	<div style="margin-bottom:60px;">
+        	<img src="images/logo.png" style="width: 85%; max-width: 327px"/>
+        </div>
+        <div id="indexing"></div>
+        If you can't find what you're looking for on the autocomplete, try
+        <a href="newitem.html">
+        	Indexing a new term
+        </a>
+        <div id="enterForm">
+        	<form method="get" action="result.jsp">
+            	<input type="text"  class="inputSearch" name="s1" id="s1" placeholder="Enter something (Choose from the autocomplete)"/><br/>
+                <input type="text"  class="inputSearch" name="s2" id="s2" placeholder="Enter another seemingly unrelated thing (autocomplete again)"/><br/>
+                <input type="submit"  class="inputButton" value="Search" id="submit"/>
+            </form>
+            <div id="searching" style="display: none;">
+               	<img src="images/loader.gif" alt="" width="28px" height="28px"/>
+               	Wait a second while we search the known universe for the connections
+            </div>
+        </div>
+        <a href="newitem.html">
+        	Index a new term
+        </a>
+        <div>
+        	<a href="why.html"> What the hell is this? and why  I did it </a><br/>
+        	made by <a href="http://www.twitter.com/rojosewe" target="_blank">@rojosewe</a> / 
+        	<a href="http://www.rojosewe.com">http://www.rojosewe.com</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.autocomplete-min.js" ></script>
+    <script>
+    	var options, a, b;
+		options = 
+		{
+	   		serviceUrl:"http://localhost:8080/eic/eic/autocomplete",
+	   	    minChars:1, 
+	   	    delimiter: /(,|;)\s*/, // regex or character
+	   	    zIndex: 9999,
+	   	    deferRequestBy: 0, //miliseconds
+	   	    onSelect: function(value, data)
+	   	    {
+	   	    	 
+	   	    }
+		};
+	    a = $("#s1").autocomplete(options);
+	    b = $("#s2").autocomplete(options);
+	    $("#submit").click(function()
+   		{
+   			$("#searching").show();
+   		});
+	    $("s1").focus();
+	    
+	    function getURLParameter(name) {
+	        return decodeURI(
+	            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+	        );
+	    }
+	    
+	    var indexing = getURLParameter('indexing');
+	    if(indexing && indexing != null && indexing != "null")
+    	{
+    		$("#indexing").html("<div class='indexing'>We are currently indexing ''"+indexing+"''. This may take a while</div>");
+    	}
+	    
+	    var indexed = getURLParameter('indexed');
+	    if(indexed && indexed != null && indexed != "null")
+    	{
+    		$("#indexing").html("<div class='indexing'>''"+indexed+"'' is already Indexed</div>");
+    	}
+	    
+	    var nowiki = getURLParameter('nowiki');
+	    if(nowiki && nowiki != null && nowiki != "null")
+    	{
+    		$("#indexing").html("<div class='indexing'>''"+nowiki+"'' is not a valid Wikipedia article or it is not available</div>");
+    	}
+    </script>
+</body>
+</html>
